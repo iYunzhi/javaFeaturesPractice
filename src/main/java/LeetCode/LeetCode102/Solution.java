@@ -1,4 +1,4 @@
-package LeetCode102;
+package LeetCode.LeetCode102;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

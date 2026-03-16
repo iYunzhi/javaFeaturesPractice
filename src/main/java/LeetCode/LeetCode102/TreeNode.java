@@ -1,4 +1,4 @@
-package LeetCode102;
+package LeetCode.LeetCode102;
 
 
 public class TreeNode {
