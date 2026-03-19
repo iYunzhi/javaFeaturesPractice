@@ -13,6 +13,7 @@ public class Solution {
 
         System.out.println(solution.isValidBST(treeNode));
 
+
     }
 
     long prev = Long.MIN_VALUE;
