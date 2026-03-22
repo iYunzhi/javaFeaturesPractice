@@ -13,12 +13,11 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Solution {
 
     public static void main(String[] args) {
-        ExecutorService pool = Executors.newFixedThreadPool(20);
 
     }
 
     List<List<Integer>> res = new ArrayList<>();
-
+    //全排列
     public List<List<Integer>> permute(int[] nums) {
         List<Integer> path = new ArrayList<>();
 
