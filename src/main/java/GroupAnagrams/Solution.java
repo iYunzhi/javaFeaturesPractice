@@ -19,6 +19,7 @@ public class Solution {
             list.add(str);
             map.put(key, list);
         }
+
         //原来的题解给出的是new ArrayList<List<String>>(map.values());,为什么我这样写也行？？
         //答：类型推断
         return new ArrayList<>(map.values());
