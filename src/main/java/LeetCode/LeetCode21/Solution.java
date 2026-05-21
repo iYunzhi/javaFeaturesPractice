@@ -1,8 +1,6 @@
 package LeetCode.LeetCode21;
 
-import java.util.List;
-
-class Solution {
+class dSolution {
 
     public static void main(String[] args) {
         ListNode list1_2 = new ListNode(4);
