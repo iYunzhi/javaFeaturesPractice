@@ -1,6 +1,7 @@
 package LeetCode.LeetCode3;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 public class Main {
@@ -9,7 +10,7 @@ public class Main {
         String s = "abcdeabcdea";
         System.out.println(lengthOfLongestSubstring(s));
     }
-    public static int lengthOfLongestSubstring(String s) {
+    public static int lengthOfLongestSubstringOld(String s) {
             char[] charArray = s.toCharArray();
             if (charArray.length == 0){ return 0;}
             int n = charArray.length;
@@ -36,5 +37,21 @@ public class Main {
 
             return ans;
 
+    }
+
+    public static int lengthOfLongestSubstring(String s) {
+        HashSet<Character> set = new HashSet<>();
+        int max = 0;
+        int left = 0; int right = 0;
+        while (right < s.length()){
+            while (set.contains(s.charAt(right))){
+                set.remove(s.charAt(left));
+                left++;
+            }
+            set.add(s.charAt(right));
+            right++;
+            max = Math.max(max,right-left);
+        }
+        return max;
     }
 }
