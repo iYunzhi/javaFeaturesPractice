@@ -1,4 +1,4 @@
-package LeetCode739;
+package LeetCode.LeetCode739;
 
 import java.util.*;
 
