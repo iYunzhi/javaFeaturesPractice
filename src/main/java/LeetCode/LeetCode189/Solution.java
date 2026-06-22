@@ -1,23 +1,35 @@
 package LeetCode.LeetCode189;
 
-public class Solution {
+import java.util.Arrays;
+import java.util.Deque;
+import java.util.LinkedList;
 
+public class Solution {
     public static void main(String[] args) {
-        int[] a = {2,5,1,3,4,7};
-        System.out.println(shuffle(a, 3));
+        Solution solution = new Solution();
+        int[] nums = new int[]{1,2,3,4,5,6,7};
+        solution.rotate(nums,3);
+        System.out.println(Arrays.toString(nums));
+
+
     }
-    public static int[] shuffle(int[] nums, int n) {
-        int[] res = new int[2*n];
-        int k=0;
-        for(int i=0;i<n;i++){
-            res[k]=nums[i];
-            k+=2;
+
+    public void rotate(int[] nums, int k) {
+        Deque<Integer> queue = new LinkedList<>();
+
+        for (int num : nums) {
+            queue.offer(num);
         }
-        int l=1;
-        for(int i=n;i<2*n;i++){
-            res[l]=nums[i];
-            l+=2;
+
+        while (k > 0){
+            Integer i = queue.pollLast();
+            queue.offerFirst(i);
+            k--;
         }
-        return res;
+
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = queue.pollFirst();
+        }
+
     }
 }
